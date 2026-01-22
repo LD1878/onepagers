@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acuerdo de Colaboración B2B | JURO Spain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CONFIGURACIÓN A4 */
+        :root {
+            --sp-red: #E30613;
+            --gold: #D4AF37;
+            --dark: #111;
+            --grey-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #555; /* Fondo gris para ver la hoja */
+            font-size: 9.5pt; /* Optimizado para lectura en una hoja */
+        }
+
+        .sheet {
+            background: white;
+            width: 210mm;
+            height: 297mm; /* A4 Exacto */
+            margin: 20px auto;
+            padding: 15mm 20mm;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 3px solid var(--sp-red);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .brand h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24pt;
+            margin: 0;
+            line-height: 1;
+            color: var(--dark);
+            text-transform: uppercase;
+        }
+
+        .brand span { color: var(--sp-red); }
+        .brand p { margin: 0; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+
+        .meta { text-align: right; font-size: 8pt; color: #666; }
+        .meta strong { color: var(--dark); display: block; font-size: 9pt; }
+
+        /* COLUMNS */
+        .col-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 25px;
+        }
+
+        /* SECTIONS */
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 11pt;
+            color: var(--sp-red);
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+            margin: 15px 0 10px 0;
+        }
+
+        h3 {
+            font-size: 9.5pt;
+            font-weight: 700;
+            margin: 10px 0 4px;
+            color: var(--dark);
+        }
+
+        p, li { line-height: 1.4; margin-bottom: 6px; }
+        ul { margin: 0; padding-left: 15px; }
+
+        /* HIGHLIGHT BOXES */
+        .box-highlight {
+            background: var(--grey-bg);
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .financial-box {
+            background: var(--dark);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+
+        .big-price { font-family: 'Oswald', sans-serif; font-size: 20pt; color: var(--gold); }
+        .price-desc { font-size: 8pt; opacity: 0.8; text-align: right; }
+
+        .tier-list { list-style: none; padding: 0; font-size: 8.5pt; opacity: 0.9; }
+        .tier-list li { display: flex; justify-content: space-between; margin-bottom: 4px; }
+        .tier-list strong { color: white; }
+
+        /* TIMELINE */
+        .timeline-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .time-block {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-radius: 4px;
+            flex: 1;
+            text-align: center;
+        }
+        .time-day { display: block; font-family: 'Oswald'; color: var(--sp-red); font-size: 9pt; }
+        .time-act { font-size: 7.5pt; color: #555; line-height: 1.2; }
+
+        /* SCOPE CHECKLIST */
+        .scope-list { list-style: none; padding: 0; font-size: 8.5pt; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+        .scope-list li::before { content: "✓"; color: var(--success-green); font-weight: bold; margin-right: 5px; }
+
+        /* FOOTER */
+        .footer {
+            position: absolute;
+            bottom: 15mm;
+            left: 20mm;
+            right: 20mm;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            font-size: 8pt;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .warning-text { color: #ff4d4d; font-size: 8pt; font-style: italic; margin-top: 8px; }
+
+        @media print {
+            body { background: white; -webkit-print-color-adjust: exact; }
+            .sheet { margin: 0; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sheet">
+    <div class="header">
+        <div class="brand">
+            <h1>JURO<span>.</span></h1>
+            <p>Relocation & Legal Services</p>
+        </div>
+        <div class="meta">
+            <strong>Marco de Colaboración B2B</strong>
+            <span>Protocolo para Despachos Colegiados</span><br>
+            <span>Málaga, España</span>
+        </div>
+    </div>
+
+    <p style="font-size: 9.5pt; margin-bottom: 25px;">
+        <strong>JURO Spain externaliza la carga operativa.</strong> Captamos clientes internacionales (USA/UK), auditamos su documentación y preparamos el expediente técnico. Buscamos un partner legal en Málaga para la <strong>validación y presentación</strong> con agilidad.
+    </p>
+
+    <div class="col-container">
+        
+        <div>
+            <h2>1. Flujo Operativo (SLA Semanal)</h2>
+            <div class="timeline-row">
+                <div class="time-block">
+                    <span class="time-day">LUNES</span>
+                    <span class="time-act">Envío de lote de expedientes (leads).</span>
+                </div>
+                <div class="time-block">
+                    <span class="time-day">LUN - JUE</span>
+                    <span class="time-act">Revisión jurídica y subsanación.</span>
+                </div>
+                <div class="time-block">
+                    <span class="time-day">VIERNES</span>
+                    <span class="time-act">Aprobación final o rechazo.</span>
+                </div>
+            </div>
+
+            <h3>Filtro de Viabilidad</h3>
+            <ul>
+                <li>El abogado debe confirmar que el expediente está <strong>completo y viable</strong> antes de aceptar.</li>
+                <li>Se requiere definir escenarios "Best-Case" y "Worst-Case" para gestionar expectativas del cliente.</li>
+            </ul>
+
+            <h2>2. Condiciones de Pago</h2>
+            <div class="box-highlight">
+                <h3>Liquidación Semanal (Lunes)</h3>
+                <p style="font-size: 9pt; margin: 0;">
+                    El pago al abogado se libera tras recibir el <strong>Justificante de Presentación</strong>. <br>
+                    JURO cubre las Tasas Administrativas por adelantado (única excepción).
+                </p>
+            </div>
+            
+            <p class="warning-text">
+                ⚠️ <strong>Política de Reembolso:</strong> Si un expediente aceptado es denegado por defecto técnico o de forma imputable a la presentación, el abogado deberá reembolsar el honorario base.
+            </p>
+
+            <h2>3. Capacidad Operativa</h2>
+            <p style="font-size: 9pt;">
+                Hemos trabajado previamente con despachos que colapsan ante el volumen. Requerimos una estructura capaz de absorber picos de trabajo sin perder los plazos de respuesta (24-48h).
+            </p>
+        </div>
+
+        <div>
+            <div class="financial-box">
+                <div class="price-row">
+                    <span class="big-price">€50</span>
+                    <div class="price-desc">
+                        Honorario Base / Expediente<br>
+                        (Solo Presentación)
+                    </div>
+                </div>
+
+                <h3 style="color:var(--gold); border-bottom:1px solid #555; padding-bottom:5px; margin-top:15px;">Escalado por Volumen</h3>
+                <ul class="tier-list">
+                    <li>
+                        <span>Tier 1 (Inicio)</span>
+                        <strong>10 exp/mes</strong>
+                    </li>
+                    <li>
+                        <span>Tier 2 (Growth)</span>
+                        <strong>20 exp/mes</strong>
+                    </li>
+                    <li>
+                        <span>Tier 3 (Partner)</span>
+                        <strong>30+ exp/mes</strong>
+                    </li>
+                </ul>
+                <p style="font-size: 7.5pt; margin-top: 10px; color: #aaa;">
+                    *Opción de fijar tarifa plana sujeta a volumen confirmado tras el periodo de prueba.
+                </p>
+            </div>
+
+            <h2 style="margin-top: 25px;">4. Alcance (Scope)</h2>
+            <p style="font-size: 8.5pt;">Confirmar capacidad para gestionar:</p>
+            <ul class="scope-list">
+                <li>Solicitud NIE</li>
+                <li>Certificado Digital</li>
+                <li>Alta Seguridad Social</li>
+                <li>Empadronamiento</li>
+                <li>Apertura Cuenta Bancaria</li>
+                <li>TIE (Cita de Huellas)</li>
+            </ul>
+            <p style="font-size: 8pt; margin-top: 10px; color: #666; font-style: italic;">
+                *Si algún servicio no puede cubrirse, debe eliminarse del alcance y ajustar la tarifa base.
+            </p>
+
+            <h2 style="margin-top: 25px;">5. Costes</h2>
+            <p style="font-size: 8.5pt;">
+                Su tarifa ofertada debe incluir todos sus costes operativos internos. No se aceptarán recargos por "gastos de gestión" posteriores.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div>
+            <strong>JURO Spain & Partners</strong> | Málaga HQ<br>
+            <a href="https://jurospain.com/partners/" style="color:var(--sp-red); text-decoration:none;">jurospain.com/partners</a>
+        </div>
+        <div style="text-align: right;">
+            Propuesta Confidencial v2026<br>
+            Uso exclusivo profesional.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

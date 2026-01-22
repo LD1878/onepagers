@@ -14,7 +14,7 @@ permalink: /propuesta/
         :root {
             --brand-gold: #B8860B; /* Dark Gold */
             --brand-red: #E30613;   /* Juro Red */
-            --text-dark: #222222;
+            --text-dark: #1a1a1a;
             --text-grey: #555555;
             --bg-offset: #F9FAFB;
             --border-color: #E5E7EB;
@@ -57,7 +57,7 @@ permalink: /propuesta/
             font-size: 32pt;
             margin: 0;
             line-height: 0.9;
-            color: var(--brand-gold); /* DARK GOLD TITLE */
+            color: var(--brand-gold);
             letter-spacing: -1px;
             text-transform: uppercase;
         }
@@ -82,19 +82,20 @@ permalink: /propuesta/
         /* EXECUTIVE SUMMARY BOX */
         .exec-summary {
             background: var(--bg-offset);
-            padding: 12px 15px;
+            padding: 15px 18px;
             border-left: 4px solid var(--brand-red);
             margin-bottom: 25px;
             font-size: 9.5pt;
             line-height: 1.5;
             color: #333;
+            border-radius: 0 6px 6px 0;
         }
 
         /* 2-COLUMN GRID */
         .grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr; /* Left slightly wider */
-            gap: 30px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 35px;
         }
 
         /* TYPOGRAPHY */
@@ -117,23 +118,58 @@ permalink: /propuesta/
             text-transform: uppercase;
         }
 
-        p { font-size: 9pt; margin-bottom: 8px; line-height: 1.4; color: var(--text-grey); }
+        p { font-size: 9pt; margin-bottom: 8px; line-height: 1.45; color: var(--text-grey); }
         ul { margin: 0; padding-left: 15px; }
         li { font-size: 9pt; margin-bottom: 4px; color: var(--text-grey); }
 
         /* MODULES */
-        .info-block { margin-bottom: 20px; }
+        .info-block { margin-bottom: 25px; }
+
+        /* VALUE PROP HIGHLIGHT (The "Machine") */
+        .value-prop {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .value-prop::before {
+            content: "VALOR AÑADIDO";
+            position: absolute;
+            top: -8px;
+            right: 10px;
+            background: var(--brand-gold);
+            color: white;
+            font-size: 7pt;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
 
         /* FINANCIAL TABLE */
         .finance-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 9pt;
+            margin-top: 10px;
+        }
+        .finance-table th { text-align: left; color: var(--text-dark); border-bottom: 1px solid #999; padding: 6px 0; font-weight: 600; }
+        .finance-table td { border-bottom: 1px solid #eee; padding: 10px 0; color: #555; }
+        .price { font-family: 'Oswald', sans-serif; color: var(--brand-gold); font-weight: 700; text-align: right; font-size: 11pt; }
+
+        /* ZERO CAC BADGE */
+        .cac-badge {
+            display: inline-block;
+            background: #e6f4ea;
+            color: #1e7e34;
+            font-size: 7.5pt;
+            padding: 3px 8px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: 1px solid #c3e6cb;
             margin-top: 5px;
         }
-        .finance-table th { text-align: left; color: var(--text-dark); border-bottom: 1px solid #999; padding: 4px 0; font-weight: 600; }
-        .finance-table td { border-bottom: 1px solid #eee; padding: 8px 0; color: #555; }
-        .price { font-family: 'Oswald', sans-serif; color: var(--brand-gold); font-weight: 700; text-align: right; font-size: 11pt; }
 
         /* PROCESS VISUAL */
         .timeline {
@@ -143,6 +179,7 @@ permalink: /propuesta/
             background: var(--bg-offset);
             padding: 10px;
             border-radius: 4px;
+            border: 1px solid #eee;
         }
         .time-col { flex: 1; text-align: center; border-right: 1px solid #ddd; }
         .time-col:last-child { border-right: none; }
@@ -209,34 +246,37 @@ permalink: /propuesta/
         </div>
 
         <div class="exec-summary">
-            <strong>Objetivo de la Alianza:</strong> Externalización operativa de expedientes de residencia (DNV/Golden Visa).<br>
-            JUROSPAIN actúa como <strong>Project Manager</strong>: captamos al cliente internacional (mercados USA/UK), realizamos la auditoría documental completa y preparamos el expediente técnico. Buscamos un <strong>Socio Jurídico en Málaga</strong> exclusivamente para la validación final y presentación telemática, eliminando la carga comercial y administrativa del despacho.
+            <strong>Objetivo:</strong> Externalización operativa de expedientes de residencia.<br>
+            JUROSPAIN actúa como <strong>Motor de Captación</strong>: nosotros realizamos la inversión en marketing, filtrado y auditoría documental. Buscamos un <strong>Socio Jurídico en Málaga</strong> para la validación final y presentación técnica. Le entregamos el activo (el cliente) listo para firma, eliminando su coste comercial.
         </div>
 
         <div class="grid">
             <div>
                 <div class="info-block">
-                    <h2>1. Perfil del Cliente & Oportunidad</h2>
-                    <p>El foco no es el volumen masivo de bajo coste, sino el perfil <strong>High Net Worth</strong>. Nuestros clientes son ingenieros de software, fundadores de startups e inversores norteamericanos.</p>
-                    <ul>
-                        <li><strong>Bajo Riesgo:</strong> Documentación financiera sólida y trazable.</li>
-                        <li><strong>Upsell:</strong> Alta probabilidad de requerir servicios posteriores (Fiscalidad/Real Estate).</li>
-                        <li><strong>Filtrado:</strong> Llegan al abogado "educados" en el proceso y con expectativas gestionadas.</li>
-                    </ul>
+                    <h2>1. La Maquinaria JURO</h2>
+                    <p>La captación de clientes internacionales (High Net Worth) es costosa y lenta. Nosotros asumimos ese riesgo por usted.</p>
+                    
+                    <div class="value-prop">
+                        <strong>Marketing & Filtrado:</strong>
+                        <p style="margin:0;">Invertimos masivamente en SEO y Paid Media en USA/UK. Nuestro equipo filtra cientos de leads mensuales para entregarle solo el expediente viable y completo.</p>
+                        <div class="cac-badge">0% Coste de Captación para el Despacho</div>
+                    </div>
+                    
+                    <p style="margin-top:10px;"><strong>El Resultado:</strong> Usted factura por su <em>expertise</em> técnico, no por horas perdidas en reuniones comerciales o correos informativos.</p>
                 </div>
 
                 <div class="info-block">
                     <h2>2. Protocolo de Actuación</h2>
-                    <p>Operamos bajo un sistema de <strong>SLA Semanal</strong> para garantizar previsibilidad:</p>
+                    <p>Operamos bajo un sistema de <strong>SLA Semanal</strong> para garantizar previsibilidad y flujo de caja:</p>
                     
                     <div class="timeline">
                         <div class="time-col">
                             <span class="time-head">LUNES</span>
-                            <span class="time-body">JURO entrega lote de expedientes auditados.</span>
+                            <span class="time-body">JURO entrega lote de expedientes.</span>
                         </div>
                         <div class="time-col">
                             <span class="time-head">SEM</span>
-                            <span class="time-body">Despacho valida viabilidad jurídica.</span>
+                            <span class="time-body">Validación de viabilidad jurídica.</span>
                         </div>
                         <div class="time-col">
                             <span class="time-head">VIE</span>
@@ -246,22 +286,22 @@ permalink: /propuesta/
 
                     <h3>Obligaciones del Partner</h3>
                     <ul>
-                        <li><strong>Pre-Check:</strong> Confirmación de viabilidad antes de aceptar el encargo.</li>
-                        <li><strong>Presentación:</strong> Uso de certificado digital colegiado (UGE-CE).</li>
-                        <li><strong>Seguimiento:</strong> Recepción de notificaciones y requerimientos.</li>
+                        <li><strong>Pre-Check:</strong> Confirmación de viabilidad antes de aceptar.</li>
+                        <li><strong>Presentación:</strong> Uso de certificado digital colegiado.</li>
+                        <li><strong>Seguimiento:</strong> Recepción de notificaciones.</li>
                     </ul>
                 </div>
 
                 <div class="info-block">
                     <h2>3. Alcance Técnico (Scope)</h2>
-                    <p>Además del visado principal, se requiere cobertura para trámites auxiliares (Ancillary Services):</p>
+                    <p>Servicios Auxiliares requeridos (facturados aparte o incluidos según paquete):</p>
                     <div class="scope-grid">
                         <div class="scope-item"><span>✓</span> Solicitud NIE (Blanco)</div>
                         <div class="scope-item"><span>✓</span> Certificado Digital</div>
                         <div class="scope-item"><span>✓</span> Alta Seg. Social (RETA)</div>
                         <div class="scope-item"><span>✓</span> Cuentas Bancarias</div>
                         <div class="scope-item"><span>✓</span> Empadronamiento</div>
-                        <div class="scope-item"><span>✓</span> TIE (Toma de Huellas)</div>
+                        <div class="scope-item"><span>✓</span> TIE (Huellas)</div>
                     </div>
                 </div>
             </div>
@@ -269,7 +309,7 @@ permalink: /propuesta/
             <div>
                 <div class="info-block">
                     <h2>4. Marco Económico</h2>
-                    <p>Propuesta de <strong>Honorarios Técnicos Fijos</strong> por expediente presentado. El abogado no asume riesgo de captación ni costes de marketing.</p>
+                    <p>Propuesta de <strong>Honorarios Técnicos Fijos</strong>. El abogado recibe un margen neto limpio, sin deducir gastos de publicidad ni gestión.</p>
                     
                     <table class="finance-table">
                         <tr>
@@ -285,10 +325,6 @@ permalink: /propuesta/
                             <td class="price">€350</td>
                         </tr>
                         <tr>
-                            <td>Golden Visa (Inversor)</td>
-                            <td class="price">€350</td>
-                        </tr>
-                        <tr>
                             <td>Renovaciones</td>
                             <td class="price">€150</td>
                         </tr>
@@ -298,26 +334,26 @@ permalink: /propuesta/
                         </tr>
                     </table>
                     <p style="font-size: 7.5pt; margin-top: 8px; color: #777;">
-                        *Tarifas base sujetas a revisión anual. JURO cubre tasas administrativas (Modelo 790) por adelantado.
+                        *JURO cubre las tasas administrativas (Modelo 790) por adelantado. Tarifas sujetas a revisión por volumen.
                     </p>
                 </div>
 
                 <div class="info-block">
                     <h2>5. Condiciones de Pago</h2>
-                    <p>Priorizamos la liquidez del colaborador:</p>
+                    <p>Priorizamos la liquidez inmediata del colaborador:</p>
                     <ul>
                         <li><strong>Ciclo:</strong> Pagos semanales (cada Lunes).</li>
                         <li><strong>Trigger:</strong> El pago se libera automáticamente <strong>24h después</strong> de aportar el Justificante de Presentación.</li>
-                        <li><strong>Garantía:</strong> No hay retenciones ni plazos a 30/60 días.</li>
+                        <li><strong>Garantía:</strong> Sin plazos de pago a 30/60 días.</li>
                     </ul>
                 </div>
 
-                <div class="info-block" style="background: var(--bg-offset); padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                <div class="info-block" style="background: var(--bg-offset); padding: 15px; border-radius: 4px; border: 1px solid #ddd; margin-top: 30px;">
                     <h2>6. Siguientes Pasos</h2>
-                    <p>Para garantizar el encaje operativo, proponemos iniciar una <strong>Fase de Calibración</strong> (Sin compromiso de volumen mínimo).</p>
+                    <p>Para garantizar el encaje operativo, proponemos iniciar una <strong>Fase de Calibración</strong> (Piloto sin compromiso de volumen).</p>
                     <p><strong>Objetivo:</strong> Procesar los primeros expedientes para ajustar la comunicación técnica y validar la agilidad de respuesta.</p>
                     <div style="text-align: center; margin-top: 15px;">
-                        <span style="font-family: 'Oswald'; font-size: 10pt; color: var(--brand-gold); text-transform: uppercase; letter-spacing: 1px;">Solicitar Acuerdo Marco</span>
+                        <span style="font-family: 'Oswald'; font-size: 10pt; color: var(--brand-gold); text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--brand-gold);">Solicitar Acuerdo Marco</span>
                     </div>
                 </div>
             </div>
